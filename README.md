@@ -1,16 +1,28 @@
-## Hi there 👋
-
-<!--
-**MugdhoAI/MugdhoAI** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+{
+  "name": "All Asmaul Husnain (Mugdho)",
+  "title": "AI Engineer | Entrepreneur | CS Student",
+  "location": "Meherpur, Bangladesh 🇧🇩",
+  "roles": [
+    "CEO & Founder — Solyn",
+    "Product Lead — Virtual Farm",
+    "Building — ApplyFixer (AI Resume Tool)"
+  ],
+  "techStack": {
+    "languages":  ["Python", "JavaScript", "HTML", "CSS"],
+    "AI_ML":      ["LangChain", "Azure AI", "Gemini API", "Claude API"],
+    "frontend":   ["React (basic)", "Tailwind CSS", "Vanilla JS"],
+    "cloud":      ["Microsoft Azure", "Netlify", "Google Cloud"],
+    "tools":      ["Git", "GitHub", "VS Code", "Node.js"]
+  },
+  "currentFocus": [
+    "Building ApplyFixer — AI-powered resume improvement tool",
+    "Scaling Virtual Farm past Phase 00 validation",
+    "Pursuing fully-funded international university scholarships"
+  ],
+  "certifications": [
+    "Microsoft Azure AI Engineer Associate (92.06%)",
+    "LangChain for LLM Application Development (100%)",
+    "550+ hours UN Online Volunteer Training"
+  ],
+  "hardDeadline": "First millionaire in the family — before June 2028 🎯"
+}
