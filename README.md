@@ -1,12 +1,12 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=F59E0B&height=200&section=header&text=All%20Asmaul%20Husnain&fontSize=48&fontColor=ffffff&fontAlignY=35&desc=AI%20Engineer%20%7C%20Founder%20%40%20Solyn%20%7C%20Builder%20of%20things%20that%20matter&descAlignY=55&descSize=16" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:F59E0B,100:22D3EE&height=220&section=header&text=All%20Asmaul%20Husnain&fontSize=48&fontColor=ffffff&fontAlignY=35&desc=AI%20Engineer%20%7C%20Founder%20%40%20Solyn%20%7C%20Builder%20of%20things%20that%20matter&descAlignY=55&descSize=16&animation=fadeIn" width="100%" />
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=F59E0B&center=true&vCenter=true&width=600&lines=AI+Engineer+%26+CS+Student;Founder+%40+Solyn+%7C+CEO+%40+Virtual+Farm;Microsoft+Azure+AI+Engineer+Associate;Outside-the-box+thinker+%F0%9F%9A%80" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&colors=F59E0B,22D3EE,F59E0B,22D3EE&center=true&vCenter=true&width=600&lines=AI+Engineer+%26+CS+Student;Founder+%40+Solyn+%7C+CEO+%40+Virtual+Farm;Microsoft+Azure+AI+Engineer+Associate;Outside-the-box+thinker+%F0%9F%9A%80" alt="Typing SVG" />
   </a>
 </p>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:F59E0B,100:22D3EE&height=3&section=header" width="100%"/>
 
 ## 🧠 Who I Am
 
@@ -41,7 +41,17 @@
 }
 ```
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,100:F59E0B&height=3&section=header" width="100%"/>
+
+## 🚧 What I'm Building
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Solyn-Umbrella%20Startup-A855F7?style=for-the-badge&logo=rocket&logoColor=white" />
+  <img src="https://img.shields.io/badge/Virtual%20Farm-Ed%20Tech%20Sim-22C55E?style=for-the-badge&logo=leaflet&logoColor=white" />
+  <img src="https://img.shields.io/badge/ApplyFixer-AI%20Resume%20Tool-3B82F6?style=for-the-badge&logo=openai&logoColor=white" />
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:F59E0B,100:22D3EE&height=3&section=header" width="100%"/>
 
 ## 🛠️ Tech Stack
 
@@ -76,31 +86,31 @@
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,100:F59E0B&height=3&section=header" width="100%"/>
 
 ## 🚀 Featured Projects
 
 <p align="center">
   <a href="https://github.com/MugdhoAI/interactive-dna">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MugdhoAI&repo=interactive-dna&theme=dark&title_color=F59E0B&icon_color=F59E0B&border_color=F59E0B" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MugdhoAI&repo=interactive-dna&theme=dark&title_color=F59E0B&icon_color=22D3EE&border_color=F59E0B&bg_color=0D1117" />
   </a>
   <a href="https://github.com/MugdhoAI/virtual-farm">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MugdhoAI&repo=virtual-farm&theme=dark&title_color=F59E0B&icon_color=F59E0B&border_color=F59E0B" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MugdhoAI&repo=virtual-farm&theme=dark&title_color=22D3EE&icon_color=F59E0B&border_color=22D3EE&bg_color=0D1117" />
   </a>
 </p>
 
 > 🌐 **Virtual Farm** is live → [virtualfarm.netlify.app](https://virtualfarm.netlify.app)
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:F59E0B,100:22D3EE&height=3&section=header" width="100%"/>
 
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MugdhoAI&theme=dark&ring=F59E0B&fire=F59E0B&currStreakLabel=F59E0B&border=F59E0B" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MugdhoAI&layout=compact&theme=dark&title_color=F59E0B&border_color=F59E0B" height="180" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MugdhoAI&theme=dark&background=0D1117&ring=F59E0B&fire=22D3EE&currStreakLabel=22D3EE&sideLabels=F59E0B&border=22D3EE" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MugdhoAI&layout=compact&theme=dark&bg_color=0D1117&title_color=F59E0B&text_color=ffffff&border_color=22D3EE" height="180" />
 </p>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,100:F59E0B&height=3&section=header" width="100%"/>
 
 ## 🤝 Connect With Me
 
@@ -116,6 +126,4 @@
   </a>
 </p>
 
----
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=F59E0B&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,100:F59E0B&height=120&section=footer" width="100%" />
