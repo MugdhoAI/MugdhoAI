@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1000 110" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="tgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#0F1830"/>
+    <stop offset="100%" stop-color="#1A1435"/>
+  </linearGradient>
+  <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#22D3EE"/>
+    <stop offset="100%" stop-color="#A78BFA"/>
+  </linearGradient>
+</defs>
+<rect x="1" y="1" width="998" height="108" rx="16" fill="url(#tgGrad)" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+<!-- left icon: simple network node cluster -->
+<g transform="translate(60,55)">
+  <circle cx="0" cy="0" r="4" fill="#22D3EE"><animate attributeName="r" values="4;6;4" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="-22" cy="-14" r="2.5" fill="#A78BFA"/>
+  <circle cx="22" cy="-14" r="2.5" fill="#A78BFA"/>
+  <circle cx="-22" cy="14" r="2.5" fill="#22D3EE"/>
+  <circle cx="22" cy="14" r="2.5" fill="#22D3EE"/>
+  <line x1="0" y1="0" x2="-22" y2="-14" stroke="#22D3EE" stroke-opacity="0.5"/>
+  <line x1="0" y1="0" x2="22" y2="-14" stroke="#22D3EE" stroke-opacity="0.5"/>
+  <line x1="0" y1="0" x2="-22" y2="14" stroke="#A78BFA" stroke-opacity="0.5"/>
+  <line x1="0" y1="0" x2="22" y2="14" stroke="#A78BFA" stroke-opacity="0.5"/>
+</g>
+
+<!-- right icon: orbiting ring (AI core) -->
+<g transform="translate(940,55)">
+  <circle cx="0" cy="0" r="5" fill="#A78BFA"/>
+  <ellipse cx="0" cy="0" rx="24" ry="10" fill="none" stroke="#22D3EE" stroke-width="1.4" stroke-opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="0" cy="0" rx="24" ry="10" fill="none" stroke="#A78BFA" stroke-width="1.4" stroke-opacity="0.6" transform="rotate(60)">
+    <animateTransform attributeName="transform" type="rotate" values="60;420" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+</g>
+
+<text x="50%" y="48" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#F1F5F9">
+  BUILDING INTELLIGENT FUTURES
+</text>
+<text x="50%" y="76" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#22D3EE" letter-spacing="1">
+  AT THE EDGE OF INNOVATION
+</text>
+</svg>
