@@ -9,22 +9,28 @@
   <a href="https://github.com/MugdhoAI">GitHub</a>
   ·
   <a href="mailto:allasmaulhusnain715@gmail.com">Email</a>
-</p>
-
-<p align="center">
-  <img src="./assets/contrib-heatmap.svg" width="100%" alt="Animated GitHub contribution heatmap" />
+  ·
+  <code>mugdhoAI / profile</code>
 </p>
 
 <table>
   <tr>
-    <td width="392.3" valign="top">
+    <td width="46%" valign="top">
       <img src="./assets/ascii-portrait.svg" width="100%" alt="Animated ASCII portrait" />
     </td>
-    <td width="457.7" valign="top">
+    <td width="54%" valign="top">
       <img src="./assets/info-card.svg" width="100%" alt="Animated profile information card" />
     </td>
   </tr>
 </table>
+
+<p align="center">
+  <sub>AI engineering · developer tooling · automation · cloud</sub>
+</p>
+
+<p align="center">
+  <img src="./assets/contrib-heatmap.svg" width="100%" alt="Animated GitHub contribution activity" />
+</p>
 
 ## What I build
 
