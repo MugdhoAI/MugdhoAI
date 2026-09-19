@@ -60,6 +60,11 @@ The goal is simple: find a real problem, understand the existing implementation,
 
 ## Selected projects
 
+### [Virtual Farm](https://virtualfarm.netlify.app)
+An agricultural decision simulator built around real-world farming decisions, historical agricultural data, weather risk, market pricing, and financial outcomes.
+
+**Live:** [virtualfarm.netlify.app](https://virtualfarm.netlify.app)
+
 ### [pycubrid](https://github.com/MugdhoAI/pycubrid)
 A Python DB-API 2.0 driver for CUBRID, with synchronous and asynchronous interfaces, SSL/TLS support, and extensive testing.
 
@@ -72,8 +77,8 @@ An AI-oriented software project for modeling and exploring decisions through str
 ### [interactive-dna](https://github.com/MugdhoAI/interactive-dna)
 An interactive 3D visualization project built around a DNA double helix, gesture interaction, and educational exploration.
 
-### [3D-Particle-System](https://github.com/MugdhoAI/3D-Particle-System)
-A real-time 3D experiment combining particle rendering, hand-gesture interaction, computer vision, and performance-focused experimentation.
+### [data-entry-automation](https://github.com/MugdhoAI/data-entry-automation)
+A Python CLI tool for validating, cleaning, and exporting structured data from CSV and Excel files, with automated tests and CI.
 
 ## Engineering approach
 
