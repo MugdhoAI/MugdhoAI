@@ -9,8 +9,6 @@
   <a href="https://github.com/MugdhoAI">GitHub</a>
   ·
   <a href="mailto:allasmaulhusnain715@gmail.com">Email</a>
-  ·
-  <code>mugdhoAI / profile</code>
 </p>
 
 <table>
@@ -25,7 +23,7 @@
 </table>
 
 <p align="center">
-  <sub>AI engineering · developer tooling · automation · cloud</sub>
+  <sub>AI engineering · developer tooling · automation · databases · open source</sub>
 </p>
 
 <p align="center">
@@ -34,45 +32,52 @@
 
 ## What I build
 
-I like turning ideas into working software — from AI-powered workflows and developer tools to automation utilities and experiments.
+I like turning ideas into working software — from AI applications and database tooling to developer utilities, automation, and interactive systems.
 
-My current technical focus includes:
+My current focus includes:
 
 - **AI & intelligent applications** — Python, Azure AI, LangChain
-- **Developer tooling** — CLIs, validation, testing, automation, CI/CD
-- **Software engineering** — clean interfaces, regression tests, defensive input handling
+- **Developer tooling** — CLI applications, validation, testing, automation, CI/CD
+- **Systems & data** — databases, APIs, input validation, defensive programming
+- **Interactive software** — real-time visualization and computer-vision experiments
 - **Cloud & deployment** — Azure, Google Cloud, Netlify
 
 ## Open source
 
-I don't just build projects in my own repositories. I also work on existing codebases, fixing concrete bugs and adding regression coverage.
+I work on existing codebases as well as my own projects: understanding unfamiliar code, fixing concrete problems, adding regression coverage, and responding to maintainer feedback.
 
 | Contribution | What I worked on |
 | --- | --- |
-| [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added coverage for all top-level CLI commands in the help output |
-| [Soup #1053](https://github.com/MakazhanAlpamys/Soup/pull/1053) · **merged** | Fixed Rich markup handling for user-controlled model names and added regression tests |
+| [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added regression coverage for the top-level CLI commands exposed in help output |
+| [Soup #1053](https://github.com/MakazhanAlpamys/Soup/pull/1053) · **open** | Fixed Rich markup handling for user-controlled model names and added regression coverage |
 | [pycubrid #378](https://github.com/cubrid-lab/pycubrid/pull/378) · **open** | Added strict positive-integer validation for `Cursor.arraysize` across sync/async cursors |
-| [cubrid-mcp-server #1](https://github.com/MugdhoAI/cubrid-mcp-server/pull/1) · **merged** | Fixed SQL-comment handling in audit categorization with regression coverage |
+| [cubrid-mcp-server #1](https://github.com/MugdhoAI/cubrid-mcp-server/pull/1) · **open** | Fixed SQL-comment handling in audit categorization with regression coverage |
 
-These contributions are part of a broader habit: find a real problem, understand the existing code, make the smallest reliable change, and prove it with tests.
+The goal is simple: find a real problem, understand the existing implementation, make the smallest reliable change, and prove it with tests.
+
+<!-- OPEN_SOURCE_START -->
+<!-- OPEN_SOURCE_END -->
 
 ## Selected projects
 
-### [cubrid-mcp-server](https://github.com/MugdhoAI/cubrid-mcp-server)
-A practical MCP server project focused on working with CUBRID databases and reliable SQL/audit behavior.
+### [pycubrid](https://github.com/MugdhoAI/pycubrid)
+A Python DB-API 2.0 driver for CUBRID, with synchronous and asynchronous interfaces, SSL/TLS support, and extensive testing.
 
-### [python-projects-showcase](https://github.com/MugdhoAI/python-projects-showcase)
-A collection of Python work, reorganized as standalone projects while keeping the code easy to explore.
+### [cubrid-mcp-server](https://github.com/MugdhoAI/cubrid-mcp-server)
+An MCP server for working with CUBRID databases, with an emphasis on SQL safety, audit behavior, and reliable database tooling.
 
 ### [Decision-Simulator](https://github.com/MugdhoAI/Decision-Simulator)
-A software experiment around modeling and exploring decisions programmatically.
+An AI-oriented software project for modeling and exploring decisions through structured programmatic interactions.
 
 ### [interactive-dna](https://github.com/MugdhoAI/interactive-dna)
-An interactive creative-coding project demonstrating experimentation beyond conventional backend/CLI work.
+An interactive 3D visualization project built around a DNA double helix, gesture interaction, and educational exploration.
 
-## How I work
+### [3D-Particle-System](https://github.com/MugdhoAI/3D-Particle-System)
+A real-time 3D experiment combining particle rendering, hand-gesture interaction, computer vision, and performance-focused experimentation.
 
-**Build → test → document → iterate.**
+## Engineering approach
+
+**Understand → change → test → verify → document.**
 
 I care about software that is understandable, reproducible, and useful — not just code that happens to run once.
 
