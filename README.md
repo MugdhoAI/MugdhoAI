@@ -39,8 +39,8 @@ My current focus includes:
 - **AI & intelligent applications** — Python, Azure AI, LangChain
 - **Developer tooling** — CLI applications, validation, testing, automation, CI/CD
 - **Systems & data** — databases, APIs, input validation, defensive programming
-- **Interactive software** — real-time visualization and computer-vision experiments
-- **Cloud & deployment** — Azure, Google Cloud, Netlify
+- **Interactive software** — real time visualization and computer vision experiments
+- **Cloud & deployment** — Azure, Google Cloud, Netlify, Vercel
 
 ## Open source
 
@@ -62,7 +62,7 @@ The goal is simple: find a real problem, understand the existing implementation,
 ## Selected projects
 
 ### [SQLite in C](https://github.com/MugdhoAI/sqlite-c)
-A small SQLite-style database engine built from scratch in C, covering SQL parsing, table operations, B-tree storage, paging, persistence, testing, benchmarking, and sanitizers.
+A small SQLite style database engine built from scratch in C, covering SQL parsing, table operations, B-tree storage, paging, persistence, testing, benchmarking, and sanitizers.
 
 ### [Search Engine](https://github.com/MugdhoAI/search-engine)
 A lightweight search engine built from scratch in Python with tokenization, an inverted index, TF-IDF ranking, Boolean queries, phrase search, JSON persistence, CLI support, tests, and CI.
