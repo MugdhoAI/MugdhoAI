@@ -32,6 +32,23 @@
   <img src="https://raw.githubusercontent.com/MugdhoAI/MugdhoAI/output/github-contribution-grid-snake.svg" width="100%" alt="GitHub contribution snake animation" />
 </p>
 
+## Contribution overview
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MugdhoAI&theme=github_dark" width="100%" alt="GitHub contribution activity overview" />
+</p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MugdhoAI&theme=github_dark" width="100%" alt="GitHub contribution statistics" />
+    </td>
+    <td width="50%">
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MugdhoAI&theme=github_dark&utcOffset=6" width="100%" alt="GitHub productive time by hour" />
+    </td>
+  </tr>
+</table>
+
 ## What I build
 
 I enjoy taking an idea or a real problem and turning it into working software. My projects range from systems and databases to AI applications, developer tools, automation, and interactive software.
