@@ -13,6 +13,17 @@
   <a href="mailto:allasmaulhusnain715@gmail.com">Email</a>
 </p>
 
+<table>
+  <tr>
+    <td width="46%" valign="top">
+      <img src="./assets/ascii-portrait.svg" width="100%" alt="Animated ASCII portrait" />
+    </td>
+    <td width="54%" valign="top">
+      <img src="./assets/info-card.svg" width="100%" alt="Animated profile information card" />
+    </td>
+  </tr>
+</table>
+
 <h3 align="center">Tech Stack</h3>
 
 <p align="center">
@@ -24,17 +35,6 @@
   <strong>Tools and deployment</strong><br>
   <img src="https://skillicons.dev/icons?i=git,github,linux,azure,gcp,vercel,netlify" alt="Git, GitHub, Linux, Azure, Google Cloud, Vercel, and Netlify" />
 </p>
-
-<table>
-  <tr>
-    <td width="46%" valign="top">
-      <img src="./assets/ascii-portrait.svg" width="100%" alt="Animated ASCII portrait" />
-    </td>
-    <td width="54%" valign="top">
-      <img src="./assets/info-card.svg" width="100%" alt="Animated profile information card" />
-    </td>
-  </tr>
-</table>
 
 <p align="center">
   <sub>C · C++ · Python · Databases · Search · AI and ML · Open source</sub>
