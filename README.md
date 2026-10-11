@@ -13,6 +13,18 @@
   <a href="mailto:allasmaulhusnain715@gmail.com">Email</a>
 </p>
 
+<h3 align="center">Tech Stack</h3>
+
+<p align="center">
+  <strong>Languages and systems</strong><br>
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,sqlite,js" alt="C, C++, Python, SQLite, and JavaScript" />
+</p>
+
+<p align="center">
+  <strong>Tools and deployment</strong><br>
+  <img src="https://skillicons.dev/icons?i=git,github,linux,azure,gcp,vercel,netlify" alt="Git, GitHub, Linux, Azure, Google Cloud, Vercel, and Netlify" />
+</p>
+
 <table>
   <tr>
     <td width="46%" valign="top">
