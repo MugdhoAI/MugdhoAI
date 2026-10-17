@@ -28,12 +28,12 @@
 
 <p align="center">
   <strong>Languages and systems</strong><br>
-  <img src="https://skillicons.dev/icons?i=c,cpp,python,sqlite,js&size=44" alt="C, C++, Python, SQLite, and JavaScript" />
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,sqlite,js" height="48" alt="C, C++, Python, SQLite, and JavaScript" />
 </p>
 
 <p align="center">
   <strong>Tools and deployment</strong><br>
-  <img src="https://skillicons.dev/icons?i=git,github,linux,azure,gcp,vercel,netlify&size=44" alt="Git, GitHub, Linux, Azure, Google Cloud, Vercel, and Netlify" />
+  <img src="https://skillicons.dev/icons?i=git,github,linux,azure,gcp,vercel,netlify" height="48" alt="Git, GitHub, Linux, Azure, Google Cloud, Vercel, and Netlify" />
 </p>
 
 <p align="center">
