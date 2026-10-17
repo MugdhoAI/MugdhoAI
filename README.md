@@ -37,6 +37,15 @@
 </p>
 
 <p align="center">
+  <strong>Web, APIs and CI</strong><br>
+  <img src="https://iconic-api.onrender.com/dark/html" width="48" alt="HTML" title="HTML" />
+  <img src="https://iconic-api.onrender.com/dark/css" width="48" alt="CSS" title="CSS" />
+  <img src="https://iconic-api.onrender.com/dark/flask" width="48" alt="Flask" title="Flask" />
+  <img src="https://iconic-api.onrender.com/dark/fastapi" width="48" alt="FastAPI" title="FastAPI" />
+  <img src="https://iconic-api.onrender.com/dark/github-actions" width="48" alt="GitHub Actions" title="GitHub Actions" />
+</p>
+
+<p align="center">
   <sub>C · C++ · Python · Databases · Search · AI and ML · Open source</sub>
 </p>
 
