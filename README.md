@@ -77,16 +77,16 @@ I contribute to existing codebases by learning the surrounding implementation, s
 ## Selected work
 
 ### [SQLite in C](https://github.com/MugdhoAI/sqlite-c)
-A small SQLite style database engine built from scratch in C, covering SQL parsing, table operations, B tree storage, paging, persistence, testing, benchmarking, and sanitizers.
+A small SQLite inspired relational database engine in C11 with a SQL parser, 4096 byte persistent pages, B tree leaf splits, and an interactive shell. It supports INSERT and SELECT, including WHERE id, and validates stored metadata and B tree structure. Its file format is project specific and is not compatible with SQLite database files. The project includes automated tests, a 1,000 row insertion benchmark, and CI checks with AddressSanitizer and UndefinedBehaviorSanitizer.
 
 ### [Search Engine](https://github.com/MugdhoAI/search-engine)
-A lightweight search engine built from scratch in Python with tokenization, an inverted index, TF IDF ranking, Boolean queries, phrase search, JSON persistence, CLI support, tests, and CI.
+A Python search engine with text normalization, stop word filtering, an inverted index, AND and OR queries, quoted phrase search, TF IDF scoring, deterministic rankings, JSON persistence, and a command line interface. CI runs tests on Python 3.11, 3.12, and 3.13 and checks the code with Ruff.
 
-### [Virtual Farm](https://virtualfarm.netlify.app/)
-An interactive farming decision simulator built around one idea: test important decisions before real money is at stake.
+### [Virtual Farm 2.0](https://github.com/MugdhoAI/virtual-farm-2.0)
+An agricultural decision support app in active development, with a Flask API, validated simulation inputs, and SQLite backed early access signup. Simulation results remain unavailable when required agricultural or economic inputs are missing, and version 2.0 is not deployed. The [older prototype](https://virtualfarm.netlify.app/) is available separately.
 
 ### [Vault API](https://github.com/MugdhoAI/vault-api)
-A REST API project focused on secret management, authentication, and access control.
+A FastAPI REST API for authenticated secret storage using PostgreSQL, asynchronous SQLAlchemy, Argon2 password hashing, JWT access tokens, and Fernet encryption. Secret queries are scoped to the authenticated owner. The project includes audit events, Alembic migrations, and PostgreSQL backed integration tests in CI. It is a learning project, not production ready.
 
 <p align="center">
   <sub>The contribution Snake is refreshed automatically from GitHub's public contribution data.</sub>
