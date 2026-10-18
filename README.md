@@ -71,7 +71,7 @@ I contribute to existing codebases by learning the surrounding implementation, s
 | [Soup #1243](https://github.com/MakazhanAlpamys/Soup/pull/1243) · **merged** | Fixed Transformers 5 BatchEncoding handling in sequence distillation and added regression coverage |
 | [Soup #1053](https://github.com/MakazhanAlpamys/Soup/pull/1053) · **merged** | Fixed Rich markup handling for user controlled model names and added regression coverage |
 | [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added regression coverage for top level CLI commands exposed in help output |
-| [cubrid-mcp-server #1](https://github.com/MugdhoAI/cubrid-mcp-server/pull/1) · **open** | Fixed SQL comment handling in audit categorization with regression coverage |
+| [cubrid-mcp-server #1](https://github.com/MugdhoAI/cubrid-mcp-server/pull/1) · **merged** | Fixed SQL comment handling in audit categorization with regression coverage |
 | [pycubrid #378](https://github.com/cubrid-lab/pycubrid/pull/378) · **merged** | Added strict positive integer validation for Cursor.arraysize across sync and async cursors |
 
 ## Selected work
