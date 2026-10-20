@@ -55,12 +55,13 @@
 
 ## Focus
 
-I build practical software while developing my foundations in systems programming, algorithms, and AI.
+I focus on building reliable software while strengthening my foundations in computer science and working toward AI engineering.
 
-- **Systems:** C, C++, databases, data structures, APIs
-- **Search:** tokenization, inverted indexes, Boolean queries, TF IDF
-- **AI and ML:** Python, LangChain, Azure AI, AI agents
-- **Engineering tools:** Linux, Git, testing, CI, cloud deployment
+- **Systems and databases:** C, database internals, B trees, storage, and data structures
+- **Search and algorithms:** tokenization, inverted indexes, Boolean queries, and TF IDF ranking
+- **Backend engineering:** Python, REST APIs, authentication, data validation, and testing
+- **AI and machine learning:** Developing my knowledge through practical work and continued study
+- **Open source:** Fixing concrete issues, writing regression tests, and working with existing codebases
 
 ## Open source
 
