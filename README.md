@@ -57,7 +57,7 @@
 
 I focus on building reliable software while strengthening my foundations in computer science and working toward AI engineering.
 
-- **Systems and databases:** C, database internals, B-trees, storage, and data structures
+- **Systems and databases:** C, database internals, B trees, storage, and data structures
 - **Search and algorithms:** tokenization, inverted indexes, Boolean queries, and TF-IDF ranking
 - **Backend engineering:** Python, REST APIs, authentication, data validation, and testing
 - **AI and machine learning:** Developing my knowledge through practical work and continued study
@@ -70,24 +70,24 @@ I contribute to existing codebases by learning the surrounding implementation, s
 | Contribution | What I worked on |
 | --- | --- |
 | [Soup #1243](https://github.com/MakazhanAlpamys/Soup/pull/1243) · **merged** | Fixed Transformers 5 BatchEncoding handling in sequence distillation and added regression coverage |
-| [Soup #1053](https://github.com/MakazhanAlpamys/Soup/pull/1053) · **merged** | Fixed Rich markup handling for user-controlled model names and added regression coverage |
-| [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added regression coverage for top-level CLI commands exposed in help output |
+| [Soup #1053](https://github.com/MakazhanAlpamys/Soup/pull/1053) · **merged** | Fixed Rich markup handling for model names supplied by users and added regression coverage |
+| [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added regression coverage for CLI commands available at the top level exposed in help output |
 | [cubrid-mcp-server #1](https://github.com/MugdhoAI/cubrid-mcp-server/pull/1) · **merged** | Fixed SQL comment handling in audit categorization with regression coverage |
 | [pycubrid #378](https://github.com/cubrid-lab/pycubrid/pull/378) · **merged** | Added strict positive integer validation for Cursor.arraysize across sync and async cursors |
 
 ## Selected work
 
 ### [SQLite in C](https://github.com/MugdhoAI/sqlite-c)
-A small SQLite-inspired relational database engine in C11 with a SQL parser, 4096-byte persistent pages, B-tree leaf splits, and an interactive shell. It supports INSERT and SELECT, including WHERE id = value, and validates stored metadata and B-tree structure. Its file format is project-specific and is not compatible with SQLite database files. The project includes automated tests, a 1,000-row insertion benchmark, and CI checks with AddressSanitizer and UndefinedBehaviorSanitizer.
+A small relational database engine inspired by SQLite in C11 with a SQL parser, persistent pages of 4096 bytes, leaf splits in a B tree, and an interactive shell. It supports INSERT and SELECT, including WHERE id equals a value, and validates stored metadata and B-tree structure. Its file format is specific to this project and is not compatible with SQLite database files. The project includes automated tests, a insertion benchmark with 1,000 rows, and CI checks with AddressSanitizer and UndefinedBehaviorSanitizer.
 
 ### [Search Engine](https://github.com/MugdhoAI/search-engine)
-A Python search engine with text normalization, stop-word filtering, an inverted index, AND and OR queries, quoted phrase search, TF-IDF scoring, deterministic rankings, JSON persistence, and a command-line interface. CI runs tests on Python 3.11, 3.12, and 3.13 and checks the code with Ruff.
+A Python search engine with text normalization, stop word filtering, an inverted index, AND and OR queries, quoted phrase search, TF IDF scoring, deterministic rankings, JSON persistence, and a command line interface. CI runs tests on Python 3.11, 3.12, and 3.13 and checks the code with Ruff.
 
 ### [Virtual Farm 2.0](https://github.com/MugdhoAI/virtual-farm-2.0)
-An agricultural decision support app in active development, with a Flask API, validated simulation inputs, and SQLite-backed early-access signup. Simulation results remain unavailable when required agricultural or economic inputs are missing, and version 2.0 is not deployed. The [older prototype](https://virtualfarm.netlify.app/) is available separately.
+An agricultural decision support app in active development, with a Flask API, validated simulation inputs, and early access signup backed by SQLite. Simulation results remain unavailable when required agricultural or economic inputs are missing, and version 2.0 is not deployed. The [older prototype](https://virtualfarm.netlify.app/) is available separately.
 
 ### [Vault API](https://github.com/MugdhoAI/vault-api)
-A FastAPI REST API for authenticated secret storage using PostgreSQL, asynchronous SQLAlchemy, Argon2 password hashing, JWT access tokens, and Fernet encryption. Secret queries are scoped to the authenticated owner. The project includes audit events, Alembic migrations, and PostgreSQL-backed integration tests in CI. It is a learning project, not production ready.
+A FastAPI REST API for authenticated secret storage using PostgreSQL, asynchronous SQLAlchemy, Argon2 password hashing, JWT access tokens, and Fernet encryption. Secret queries are scoped to the authenticated owner. The project includes audit events, Alembic migrations, and integration tests backed by PostgreSQL in CI. It is a learning project, not production ready.
 
 <p align="center">
   <sub>The contribution Snake is refreshed automatically from GitHub's public contribution data.</sub>
