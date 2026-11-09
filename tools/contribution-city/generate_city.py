@@ -60,6 +60,10 @@ def fetch_graphql(user, token):
     q = """query($login:String!){
       user(login:$login){
         contributionsCollection{
+          totalCommitContributions totalIssueContributions
+          totalPullRequestContributions
+          totalPullRequestReviewContributions
+          totalRepositoryContributions
           contributionCalendar{ totalContributions
             weeks{ contributionDays{ date contributionCount } } }
         }
@@ -74,7 +78,12 @@ def fetch_graphql(user, token):
     }"""
     data = curl_json(API, {"query": q, "variables": {"login": user}}, token)
     u = data["data"]["user"]
-    cal = u["contributionsCollection"]["contributionCalendar"]
+    cc = u["contributionsCollection"]
+    radar = [cc["totalCommitContributions"], cc["totalIssueContributions"],
+             cc["totalPullRequestContributions"],
+             cc["totalPullRequestReviewContributions"],
+             cc["totalRepositoryContributions"]]
+    cal = cc["contributionCalendar"]
     days, total = {}, cal["totalContributions"]
     for wk in cal["weeks"]:
         for d in wk["contributionDays"]:
@@ -86,7 +95,7 @@ def fetch_graphql(user, token):
         for e in repo["languages"]["edges"]:
             name = e["node"]["name"]
             lang_bytes[name] = lang_bytes.get(name, 0) + e["size"]
-    return model_from(days, total, lang_bytes, stars, forks)
+    return model_from(days, total, lang_bytes, stars, forks, radar)
 
 
 def fetch_fallback(user, token):
@@ -119,10 +128,10 @@ def fetch_fallback(user, token):
         if r.get("language"):
             lang_bytes[r["language"]] = \
                 lang_bytes.get(r["language"], 0) + r.get("size", 0)
-    return model_from(days, sum(days.values()), lang_bytes, stars, forks)
+    return model_from(days, sum(days.values()), lang_bytes, stars, forks, None)
 
 
-def model_from(days, total, lang_bytes, stars, forks):
+def model_from(days, total, lang_bytes, stars, forks, radar):
     langs = []
     tot_bytes = sum(lang_bytes.values()) or 1
     for name, size in sorted(lang_bytes.items(), key=lambda kv: -kv[1]):
@@ -133,7 +142,7 @@ def model_from(days, total, lang_bytes, stars, forks):
     if langs and shown < 99.5:
         langs.append(("Other", round(100 - shown, 1)))
     return {"days": days, "total": total, "languages": langs,
-            "stars": stars, "forks": forks,
+            "stars": stars, "forks": forks, "radar": radar,
             "today": date.today().isoformat()}
 
 
@@ -247,10 +256,28 @@ def render(model):
                '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
                '<stop offset="0%" stop-color="#0a120d"/>'
                '<stop offset="100%" stop-color="#060807"/>'
-               "</linearGradient></defs>")
+               "</linearGradient>"
+               '<radialGradient id="amb" cx="50%" cy="50%" r="50%">'
+               '<stop offset="0%" stop-color="#14532d" stop-opacity="0.5"/>'
+               '<stop offset="100%" stop-color="#14532d" stop-opacity="0"/>'
+               "</radialGradient>"
+               '<radialGradient id="goldglow" cx="50%" cy="50%" r="50%">'
+               '<stop offset="0%" stop-color="#e3b341" stop-opacity="0.55"/>'
+               '<stop offset="100%" stop-color="#e3b341" stop-opacity="0"/>'
+               "</radialGradient></defs>")
     out.append(f'<rect width="{W}" height="{H}" rx="14" fill="url(#bg)"/>')
     out.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" '
                f'fill="none" stroke="#1d2b20"/>')
+    out.append('<ellipse cx="650" cy="220" rx="570" ry="255" fill="url(#amb)"/>')
+    dust_rng = random.Random(42)
+    dots = []
+    for _ in range(52):
+        dx = dust_rng.uniform(430, 1175)
+        dy = dust_rng.uniform(16, 195)
+        dots.append(f'<circle cx="{dx:.0f}" cy="{dy:.0f}" '
+                    f'r="{dust_rng.uniform(0.7, 1.7):.1f}" fill="#a8d8b0" '
+                    f'opacity="{dust_rng.uniform(0.05, 0.15):.2f}"/>')
+    out.append("".join(dots))
 
     # ---- stats, top left corner ----
     out.append(f'<text x="44" y="54" font-size="13" font-weight="700" '
@@ -268,9 +295,51 @@ def render(model):
     out.append(f'<path transform="translate(50 208) scale(0.85)" '
                f'fill="#e3b341" d="M0-7 L2.1-2.4 7-2.1 3.4 1.3 4.2 6.2 '
                f'0 3.6 -4.2 6.2 -3.4 1.3 -7-2.1 -2.1-2.4 Z"/>')
+    forks_bit = f' · {model["forks"]} forks' if model["forks"] else ''
     out.append(f'<text x="63" y="213" font-size="14" fill="#c9d1d9">'
-               f'{model["stars"]} stars across my projects · '
-               f'{model["forks"]} forks</text>')
+               f'{model["stars"]} stars across my projects{forks_bit}</text>')
+
+    # ---- radar chart, top right corner ----
+    radar = model.get("radar")
+    if radar and any(radar):
+        rcx, rcy, R = 1008, 128, 72
+        rlabels = ["Commit", "Issue", "PullReq", "Review", "Repo"]
+
+        def rpoint(i, frac):
+            a = -math.pi / 2 + i * 2 * math.pi / 5
+            return rcx + R * frac * math.cos(a), rcy + R * frac * math.sin(a)
+
+        for fr in (1 / 3, 2 / 3, 1.0):
+            ring = " ".join(f"{rpoint(i, fr)[0]:.1f},{rpoint(i, fr)[1]:.1f}"
+                            for i in range(5))
+            out.append(f'<polygon points="{ring}" fill="none" '
+                       f'stroke="#2c5233" stroke-width="0.8" '
+                       f'stroke-dasharray="3 3" opacity="0.85"/>')
+        for i in range(5):
+            x, y = rpoint(i, 1.0)
+            out.append(f'<line x1="{rcx}" y1="{rcy}" x2="{x:.1f}" '
+                       f'y2="{y:.1f}" stroke="#22392a" stroke-width="0.8"/>')
+
+        def vfrac(v):
+            return min(1.0, math.log10(max(0, v) + 1) / 3.0)
+
+        poly = " ".join(
+            f"{rpoint(i, vfrac(radar[i]))[0]:.1f},"
+            f"{rpoint(i, vfrac(radar[i]))[1]:.1f}" for i in range(5))
+        out.append(f'<polygon points="{poly}" fill="#3fb950" '
+                   f'fill-opacity="0.25" stroke="#3fb950" stroke-width="1.5"/>')
+        for i in range(5):
+            x, y = rpoint(i, vfrac(radar[i]))
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.2" '
+                       f'fill="#7ee787"/>')
+        for fr, t in ((1 / 3, "10"), (2 / 3, "100"), (1.0, "1K")):
+            x, y = rpoint(0, fr)
+            out.append(f'<text x="{x + 4:.1f}" y="{y + 3:.1f}" font-size="8" '
+                       f'fill="#55705e">{t}</text>')
+        for i, lab in enumerate(rlabels):
+            x, y = rpoint(i, 1.18)
+            out.append(f'<text x="{x:.1f}" y="{y + 3:.1f}" font-size="10.5" '
+                       f'fill="#8fae97" text-anchor="middle">{lab}</text>')
 
     # ---- ground slab ----
     midx = (pts["TL"][0] + pts["BR"][0]) / 2
@@ -292,23 +361,45 @@ def render(model):
     out.append(f'<polygon points="{right_face}" fill="#070c08"/>')
     out.append(f'<polygon points="{slab_top}" fill="none" '
                f'stroke="#22402a" stroke-width="1"/>')
+    fx1, fy1 = tile_x(0, 6), tile_y(0, 6) + TH / 2 + 6
+    fx2, fy2 = pts["BR"]
+    out.append(f'<line x1="{fx1:.0f}" y1="{fy1 - 8:.0f}" x2="{fx2:.0f}" '
+               f'y2="{fy2 - 8:.0f}" stroke="#1d3a24" stroke-width="6" '
+               f'opacity="0.65"/>')
+    out.append(f'<line x1="{fx1:.0f}" y1="{fy1 - 8:.0f}" x2="{fx2:.0f}" '
+               f'y2="{fy2 - 8:.0f}" stroke="#3fb950" stroke-width="1.2" '
+               f'opacity="0.35"/>')
+
+    # light pools that follow the strip under the tower half
+    for t, rx, op in ((0.52, 215, 0.5), (0.72, 175, 0.55), (0.92, 135, 0.6)):
+        gx = tile_x(0, 3) + (tile_x(WEEKS_SHOWN - 1, 3) - tile_x(0, 3)) * t
+        gy = tile_y(0, 3) + (tile_y(WEEKS_SHOWN - 1, 3) - tile_y(0, 3)) * t + 16
+        out.append(f'<g transform="rotate(26.57 {gx:.0f} {gy:.0f})">'
+                   f'<ellipse cx="{gx:.0f}" cy="{gy:.0f}" rx="{rx}" '
+                   f'ry="{rx * 0.36:.0f}" fill="url(#glow)" opacity="{op}"/>'
+                   f'</g>')
+
+    peak = max(cells, key=lambda c: c[3]) if cells else (0, 0, today, 0)
 
     # ---- cells, back to front ----
     for w, d, day, count in sorted(cells, key=lambda c: (c[0] + c[1], c[0])):
         cx, cy = tile_x(w, d), tile_y(w, d)
+        frac = w / max(1, WEEKS_SHOWN - 1)
+        dfac = 0.5 + 0.5 * frac
+        bfac = 0.76 + 0.24 * frac
         s, e = timing(w, d)
         kt_anim = f"0;{s / GROW_TOTAL:.4f};{e / GROW_TOTAL:.4f};1"
         lvl = level_for(count)
         tile = (f"{cx:.1f},{cy - TH/2:.1f} {cx + TW/2:.1f},{cy:.1f} "
                 f"{cx:.1f},{cy + TH/2:.1f} {cx - TW/2:.1f},{cy:.1f}")
         if count <= 0:
-            out.append(f'<polygon points="{tile}" fill="{PARK}"/>')
+            out.append(f'<polygon points="{tile}" fill="{shade(PARK, dfac)}"/>')
             rng = random.Random(seed_of(day.isoformat()))
             roll = rng.random()
             if roll < 0.58:
                 tx = cx + rng.uniform(-7, 7)
                 ty = cy + rng.uniform(-2, 3)
-                leaf = shade("#2ea043", rng.uniform(0.8, 1.25))
+                leaf = shade("#2ea043", rng.uniform(0.8, 1.25) * dfac)
                 trunk = (
                     f'<g transform="translate({tx:.1f} {ty:.1f})">'
                     + anim("scale", GROW_TOTAL, "0 0;0 0;1.18 1.18;1 1",
@@ -329,7 +420,8 @@ def render(model):
                     + f'<circle cx="0" cy="-2" r="3" fill="#1f4429"/></g>')
                 out.append(bush)
             continue
-        base = LEVEL_COLORS[lvl]
+        is_peak = (w, d) == (peak[0], peak[1])
+        base = "#e3b341" if is_peak else LEVEL_COLORS[lvl]
         h = height(count)
         top_poly = (f"{cx:.1f},{cy - TH/2 - h:.1f} {cx + TW/2:.1f},{cy - h:.1f} "
                     f"{cx:.1f},{cy + TH/2 - h:.1f} {cx - TW/2:.1f},{cy - h:.1f}")
@@ -337,19 +429,10 @@ def render(model):
                      f"{cx:.1f},{cy + TH/2:.1f} {cx - TW/2:.1f},{cy:.1f}")
         right_poly = (f"{cx + TW/2:.1f},{cy - h:.1f} {cx:.1f},{cy + TH/2 - h:.1f} "
                       f"{cx:.1f},{cy + TH/2:.1f} {cx + TW/2:.1f},{cy:.1f}")
-        if h >= 44:
-            gr = 90 + h * 1.1
-            out.append(
-                f'<g opacity="0">'
-                f'<animate attributeName="opacity" dur="{GROW_TOTAL:.2f}s" '
-                f'fill="freeze" values="0;0;0.55;0.55" '
-                f'keyTimes="0;{e / GROW_TOTAL:.4f};'
-                f'{min(1.0, e / GROW_TOTAL + 0.08):.4f};1"/>'
-                f'<ellipse cx="{cx:.1f}" cy="{cy + 6:.1f}" rx="{gr:.0f}" '
-                f'ry="{gr * 0.36:.0f}" fill="url(#glow)"/></g>')
         windows = ""
         if h >= 52:
             rng = random.Random(seed_of(day.isoformat()) + 7)
+            win_col = "#cfe8ff" if rng.random() < 0.22 else "#ffd76a"
             rows = int(h // 15)
             for r_i in range(rows):
                 wy = cy - h + 12 + r_i * 15
@@ -358,16 +441,36 @@ def render(model):
                         wy2 = wy + (3.8 if side == "R" else 0)
                         windows += (f'<rect x="{sx:.1f}" y="{wy2:.1f}" '
                                     f'width="4.4" height="6" rx="1" '
-                                    f'fill="#ffd76a" opacity="0.85"/>')
+                                    f'fill="{win_col}" opacity="0.85"/>')
+        top_y = cy - TH / 2 - h
+        extra = ""
+        if is_peak:
+            extra = (
+                f'<line x1="{cx:.1f}" y1="{top_y + 3:.1f}" x2="{cx:.1f}" '
+                f'y2="{top_y - 17:.1f}" stroke="#e3b341" stroke-width="2"/>'
+                f'<circle cx="{cx:.1f}" cy="{top_y - 21:.1f}" r="10" '
+                f'fill="url(#goldglow)"/>'
+                f'<circle cx="{cx:.1f}" cy="{top_y - 21:.1f}" r="3.2" '
+                f'fill="#ffd76a">'
+                f'<animate attributeName="opacity" values="1;0.3;1" '
+                f'dur="2.4s" repeatCount="indefinite"/></circle>')
+        elif h >= 95:
+            extra = (
+                f'<line x1="{cx:.1f}" y1="{top_y + 2:.1f}" x2="{cx:.1f}" '
+                f'y2="{top_y - 10:.1f}" stroke="{shade(base, 0.4)}" '
+                f'stroke-width="1.6"/>'
+                f'<circle cx="{cx:.1f}" cy="{top_y - 12:.1f}" r="1.7" '
+                f'fill="#ffd76a"/>')
         building = (
             f'<g transform="translate({cx:.1f} {cy:.1f})">'
             + anim("scale", GROW_TOTAL, "1 0;1 0;1 1.03;1 1", kt_anim)
             + f'<g transform="translate({-cx:.1f} {-cy:.1f})">'
-            + f'<polygon points="{left_poly}" fill="{shade(base, 0.55)}"/>'
-            + f'<polygon points="{right_poly}" fill="{shade(base, 0.78)}"/>'
-            + f'<polygon points="{top_poly}" fill="{shade(base, 1.22)}"/>'
-            + windows + "</g></g>")
-        out.append(f'<polygon points="{tile}" fill="{shade(base, 0.3)}"/>')
+            + f'<g transform="translate({0.18 * cx:.1f} 0) scale(0.82 1)">'
+            + f'<polygon points="{left_poly}" fill="{shade(base, 0.55 * bfac)}"/>'
+            + f'<polygon points="{right_poly}" fill="{shade(base, 0.78 * bfac)}"/>'
+            + f'<polygon points="{top_poly}" fill="{shade(base, 1.22 * bfac)}"/>'
+            + windows + extra + "</g></g></g>")
+        out.append(f'<polygon points="{tile}" fill="{shade(base, 0.3 * bfac)}"/>')
         out.append(building)
 
     # ---- languages footer line ----
