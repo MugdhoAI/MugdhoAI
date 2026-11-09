@@ -27,22 +27,8 @@
 <h3 align="center">Tech Stack</h3>
 
 <p align="center">
-  <strong>Languages and systems</strong><br>
-  <img src="https://skillicons.dev/icons?i=c,cpp,python,sqlite,js" height="48" alt="C, C++, Python, SQLite, and JavaScript" />
-</p>
-
-<p align="center">
-  <strong>Tools and deployment</strong><br>
-  <img src="https://skillicons.dev/icons?i=git,github,linux,azure,gcp,vercel,netlify" height="48" alt="Git, GitHub, Linux, Azure, Google Cloud, Vercel, and Netlify" />
-</p>
-
-<p align="center">
-  <strong>Web, APIs and CI</strong><br>
-  <img src="https://iconic-api.onrender.com/dark/html" width="48" alt="HTML" title="HTML" />
-  <img src="https://iconic-api.onrender.com/dark/css" width="48" alt="CSS" title="CSS" />
-  <img src="https://iconic-api.onrender.com/dark/flask" width="48" alt="Flask" title="Flask" />
-  <img src="https://iconic-api.onrender.com/dark/fastapi" width="48" alt="FastAPI" title="FastAPI" />
-  <img src="https://iconic-api.onrender.com/dark/github-actions" width="48" alt="GitHub Actions" title="GitHub Actions" />
+  <img src="https://skillicons.dev/icons?i=c,cpp,python,js,sqlite,html,css" height="40" alt="C, C++, Python, JavaScript, SQLite, HTML, and CSS" /><br>
+  <img src="https://skillicons.dev/icons?i=git,github,linux,fastapi,flask,githubactions,azure,gcp,vercel,netlify" height="40" alt="Git, GitHub, Linux, FastAPI, Flask, GitHub Actions, Azure, Google Cloud, Vercel, and Netlify" />
 </p>
 
 <p align="center">
@@ -50,22 +36,23 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MugdhoAI/MugdhoAI/output/github-contribution-grid-snake.svg" width="100%" alt="GitHub contribution snake animation" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" width="100%" alt="3D contribution city: every building is a day, and taller buildings mean more contributions that day" />
+</p>
 </p>
 
 ## Pinned projects
 
 ### [SQLite in C](https://github.com/MugdhoAI/sqlite-c)
-A small relational database engine inspired by SQLite in C11 with a SQL parser, persistent pages of 4096 bytes, leaf splits in a B tree, and an interactive shell. It supports INSERT and SELECT, including WHERE id equals a value, and validates stored metadata and B-tree structure. Its file format is specific to this project and is not compatible with SQLite database files. The project includes automated tests, a insertion benchmark with 1,000 rows, and CI checks with AddressSanitizer and UndefinedBehaviorSanitizer.
+A relational database engine built from scratch in C11, inspired by SQLite. Its own file format with 4096 byte pages, a B tree with leaf splits, a SQL parser, and an interactive shell for INSERT and SELECT. Automated tests, a 1,000 row insert benchmark, and CI with AddressSanitizer and UndefinedBehaviorSanitizer. Educational, and not compatible with SQLite database files.
 
 ### [Search Engine](https://github.com/MugdhoAI/search-engine)
-A Python search engine with text normalization, stop word filtering, an inverted index, AND and OR queries, quoted phrase search, TF IDF scoring, deterministic rankings, JSON persistence, and a command line interface. CI runs tests on Python 3.11, 3.12, and 3.13 and checks the code with Ruff.
+A search engine built from scratch in Python. An inverted index answers AND, OR, and quoted phrase queries, ranked by TF-IDF with deterministic results. CLI and web app, JSON persistence, and CI across Python 3.11 to 3.13.
 
 ### [Virtual Farm 2.0](https://github.com/MugdhoAI/virtual-farm-2.0)
-An agricultural decision support app in active development, with a Flask API, validated simulation inputs, and early access signup backed by SQLite. Simulation results remain unavailable when required agricultural or economic inputs are missing, and version 2.0 is not deployed. The [older prototype](https://virtualfarm.netlify.app/) is available separately.
+An agricultural decision support app in active development. A Flask API runs farm simulations from validated agricultural and economic inputs, with early access signup backed by SQLite. Version 2.0 is not deployed yet; the [older prototype](https://virtualfarm.netlify.app/) is live separately.
 
 ### [Vault API](https://github.com/MugdhoAI/vault-api)
-A FastAPI REST API for authenticated secret storage using PostgreSQL, asynchronous SQLAlchemy, Argon2 password hashing, JWT access tokens, and Fernet encryption. Secret queries are scoped to the authenticated owner. The project includes audit events, Alembic migrations, and integration tests backed by PostgreSQL in CI. It is a learning project, not production ready.
+A FastAPI REST API for storing secrets, built to learn backend security properly. Argon2 password hashing, Fernet encryption at rest, JWT access tokens, and secrets scoped to their owner, with audit events and PostgreSQL integration tests. A learning project, not production ready.
 
 ## Focus
 
@@ -90,5 +77,5 @@ I contribute to existing codebases by learning the surrounding implementation, s
 | [pycubrid #378](https://github.com/cubrid-lab/pycubrid/pull/378) · **merged** | Added strict positive integer validation for Cursor.arraysize across sync and async cursors |
 
 <p align="center">
-  <sub>The contribution Snake is refreshed automatically from GitHub's public contribution data.</sub>
+  <sub>The contribution city is generated from my GitHub activity: every building is a day, and taller buildings mean more contributions that day.</sub>
 </p>
