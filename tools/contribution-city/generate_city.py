@@ -284,26 +284,47 @@ def render(model):
                    + " ".join(f"{x:.0f},{y:.0f}" for x, y in side)
                    + '" fill="#070a07"/>')
 
+    # Grow-in animation: one master timeline (seconds). Each building scales
+    # up from its own ground plot, staggered back to front by week, so the
+    # city rises in a wave. Base state is the finished city, so static
+    # renderers and the settled frame look identical.
+    GROW_TOTAL = 2.6
+
+    def timing(w, d):
+        start = 0.12 + w * 0.085 + d * 0.018
+        return start / GROW_TOTAL, (start + 0.8) / GROW_TOTAL
+
     # tiles, buildings, trees (painter order)
     for _, w, d, date, count in cells:
         cxp, cyp = tile_cx(w, d), tile_cy(w, d)
         s = seed_of(date.isoformat())
+        sf, ef = timing(w, d)
         base = "#152219" if (w + d) % 2 == 0 else "#121e15"
         top_pts = (f"{cxp:.1f},{cyp - TH / 2:.1f} {cxp + TW / 2:.1f},{cyp:.1f} "
                    f"{cxp:.1f},{cyp + TH / 2:.1f} {cxp - TW / 2:.1f},{cyp:.1f}")
         out.append(f'<polygon points="{top_pts}" fill="{base}" '
                    f'stroke="#0a0f0b" stroke-width="0.6"/>')
         if count <= 0:
-            # park plot: a tree on a seeded share of quiet days
+            # park plot: a tree on a seeded share of quiet days, drawn in
+            # local coords inside a group that sprouts with a small bounce
             if s % 100 < 58:
                 sway = (s % 9) - 4
-                out.append(f'<line x1="{cxp + sway}" y1="{cyp}" '
-                           f'x2="{cxp + sway}" y2="{cyp - 7}" '
-                           f'stroke="#7a5230" stroke-width="2"/>')
-                out.append(f'<circle cx="{cxp + sway - 4.5}" cy="{cyp - 9}" r="4" fill="#2ea043"/>')
-                out.append(f'<circle cx="{cxp + sway + 4.5}" cy="{cyp - 9.5}" r="4.3" fill="#238636"/>')
-                out.append(f'<circle cx="{cxp + sway}" cy="{cyp - 13.5}" r="5.4" fill="#3fb950"/>')
-                out.append(f'<circle cx="{cxp + sway - 1.6}" cy="{cyp - 15.2}" r="1.7" fill="#7ee787" opacity=".85"/>')
+                e1 = sf + 0.3 / GROW_TOTAL
+                e2 = e1 + 0.18 / GROW_TOTAL
+                out.append(f'<g transform="translate({cxp + sway:.1f} {cyp:.1f})">')
+                out.append(f'<animateTransform attributeName="transform" '
+                           f'type="scale" additive="sum" '
+                           f'values="0;0;1.15;1;1" '
+                           f'keyTimes="0;{sf:.3f};{e1:.3f};{e2:.3f};1" '
+                           f'keySplines="0 0 1 1;0 .2 .3 1;0 0 1 1;0 0 1 1" '
+                           f'calcMode="spline" dur="{GROW_TOTAL}s"/>')
+                out.append('<line x1="0" y1="0" x2="0" y2="-7" '
+                           'stroke="#7a5230" stroke-width="2"/>')
+                out.append('<circle cx="-4.5" cy="-9" r="4" fill="#2ea043"/>')
+                out.append('<circle cx="4.5" cy="-9.5" r="4.3" fill="#238636"/>')
+                out.append('<circle cx="0" cy="-13.5" r="5.4" fill="#3fb950"/>')
+                out.append('<circle cx="-1.6" cy="-15.2" r="1.7" fill="#7ee787" opacity=".85"/>')
+                out.append('</g>')
             elif s % 100 < 74:
                 out.append(f'<circle cx="{cxp + 6}" cy="{cyp - 2}" r="2.6" fill="#238636"/>')
                 out.append(f'<circle cx="{cxp + 9}" cy="{cyp - 3.4}" r="1.9" fill="#3fb950"/>')
@@ -315,24 +336,35 @@ def render(model):
         right_col = shade(base_col, 0.78)
         if count >= 40:
             out.append(f'<ellipse cx="{cxp}" cy="{cyp + 3}" rx="{TW * 0.78}" '
-                       f'ry="{TH * 0.8}" fill="url(#glow)"/>')
-        out.append(f'<polygon points="{cxp - TW / 2:.1f},{cyp:.1f} {cxp:.1f},{cyp + TH / 2:.1f} '
-                   f'{cxp:.1f},{cyp + TH / 2 - h:.1f} {cxp - TW / 2:.1f},{cyp - h:.1f}" fill="{left_col}"/>')
-        out.append(f'<polygon points="{cxp + TW / 2:.1f},{cyp:.1f} {cxp:.1f},{cyp + TH / 2:.1f} '
-                   f'{cxp:.1f},{cyp + TH / 2 - h:.1f} {cxp + TW / 2:.1f},{cyp - h:.1f}" fill="{right_col}"/>')
-        out.append(f'<polygon points="{cxp:.1f},{cyp - h - TH / 2:.1f} {cxp + TW / 2:.1f},{cyp - h:.1f} '
-                   f'{cxp:.1f},{cyp - h + TH / 2:.1f} {cxp - TW / 2:.1f},{cyp - h:.1f}" fill="{top_col}"/>')
-        # lit windows on tall towers, right face
+                       f'ry="{TH * 0.8}" fill="url(#glow)">'
+                       f'<animate attributeName="opacity" values="0;0;1;1" '
+                       f'keyTimes="0;{sf:.3f};{ef:.3f};1" '
+                       f'dur="{GROW_TOTAL}s"/></ellipse>')
+        # building in local coords (ground at 0,0), grown by scaling Y
+        out.append(f'<g transform="translate({cxp:.1f} {cyp:.1f})">')
+        out.append(f'<animateTransform attributeName="transform" type="scale" '
+                   f'additive="sum" values="1 0;1 0;1 1;1 1" '
+                   f'keyTimes="0;{sf:.3f};{ef:.3f};1" '
+                   f'keySplines="0 0 1 1;0 .2 .3 1;0 0 1 1" '
+                   f'calcMode="spline" dur="{GROW_TOTAL}s"/>')
+        out.append(f'<polygon points="{-TW / 2:.1f},0 0,{TH / 2:.1f} '
+                   f'0,{TH / 2 - h:.1f} {-TW / 2:.1f},{-h:.1f}" fill="{left_col}"/>')
+        out.append(f'<polygon points="{TW / 2:.1f},0 0,{TH / 2:.1f} '
+                   f'0,{TH / 2 - h:.1f} {TW / 2:.1f},{-h:.1f}" fill="{right_col}"/>')
+        out.append(f'<polygon points="0,{-h - TH / 2:.1f} {TW / 2:.1f},{-h:.1f} '
+                   f'0,{-h + TH / 2:.1f} {-TW / 2:.1f},{-h:.1f}" fill="{top_col}"/>')
+        # lit windows on tall towers, right face (local coords)
         if h >= 52:
             for i in range(5):
                 ss = seed_of(date.isoformat() + str(i))
                 fx = 0.22 + (ss % 55) / 100.0
                 fy = 0.2 + ((ss >> 4) % 55) / 100.0
-                wx = cxp + TW / 2 + (0 - TW / 2) * fx
-                wy = cyp + (TH / 2) * fx - h * fy
+                wx = TW / 2 * (1 - fx)
+                wy = (TH / 2) * fx - h * fy
                 if ss % 100 < 68:
                     out.append(f'<rect x="{wx:.1f}" y="{wy:.1f}" width="3" '
                                f'height="4.4" fill="#e6ffec" opacity=".8"/>')
+        out.append('</g>')
 
     # right rail: languages
     rx = 838
