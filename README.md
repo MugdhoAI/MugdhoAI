@@ -36,7 +36,7 @@
 </p>
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="100%" alt="3D contribution city: every building is a day, and taller buildings mean more contributions that day" />
+  <img src="./assets/contribution-city.svg" width="100%" alt="Contribution city: a 3D skyline of my GitHub activity, every building is a day and taller buildings mean more contributions" />
 </p>
 </p>
 
@@ -77,5 +77,5 @@ I contribute to existing codebases by learning the surrounding implementation, s
 | [pycubrid #378](https://github.com/cubrid-lab/pycubrid/pull/378) · **merged** | Added strict positive integer validation for Cursor.arraysize across sync and async cursors |
 
 <p align="center">
-  <sub>The contribution city is generated from my GitHub activity: every building is a day, and taller buildings mean more contributions that day.</sub>
+  <sub>The contribution city above is drawn from my real GitHub activity and refreshed daily by a generator I built: every building is a day, taller buildings mean more contributions, and quiet days stay parks.</sub>
 </p>
