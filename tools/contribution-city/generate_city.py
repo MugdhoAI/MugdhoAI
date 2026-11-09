@@ -97,10 +97,16 @@ def fetch_fallback(user, token):
         capture_output=True, text=True)
     if html.returncode != 0:
         raise RuntimeError("fallback page fetch failed")
-    counts = dict(re.findall(
-        r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*data-level="\d"[^>]*>'
+    cells = dict(re.findall(
+        r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*'
+        r'id="(contribution-day-component-[\d-]+)"', html.stdout))
+    tips = dict(re.findall(
+        r'<tool-tip[^>]*for="(contribution-day-component-[\d-]+)"[^>]*>'
         r'\s*(?:No contributions|(\d+)\s+contribution)', html.stdout))
-    days = {d: int(c) if c else 0 for d, c in counts.items()}
+    days = {}
+    for dstr, cid in cells.items():
+        tip = tips.get(cid, "")
+        days[dstr] = int(tip) if tip else 0
     repos = curl_json(
         f"https://api.github.com/users/{user}/repos?per_page=100&type=owner",
         token=token)
