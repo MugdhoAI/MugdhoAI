@@ -2,7 +2,8 @@
 
 <p align="center">
   <strong>CS Student · Future AI Engineer · Builder</strong><br>
-  I build practical software, study computer science, and contribute to open source.
+  I build practical software, study computer science, and contribute to open source.<br>
+  Open to internships and open source collaboration.
 </p>
 
 <p align="center">
@@ -48,25 +49,19 @@ A relational database engine built from scratch in C11, inspired by SQLite. Its 
 ### [Search Engine](https://github.com/MugdhoAI/search-engine)
 A search engine built from scratch in Python. An inverted index answers AND, OR, and quoted phrase queries, ranked by TF-IDF with deterministic results. CLI and web app, JSON persistence, and CI across Python 3.11 to 3.13.
 
-### [Virtual Farm 2.0](https://github.com/MugdhoAI/virtual-farm-2.0)
-An agricultural decision support app in active development. A Flask API runs farm simulations from validated agricultural and economic inputs, with early access signup backed by SQLite. Version 2.0 is not deployed yet; the [older prototype](https://virtualfarm.netlify.app/) is live separately.
+### [ImportGuard](https://github.com/MugdhoAI/ImportGuard)
+A review-first CSV mapping and validation workspace, shipped and live. Import a CSV, map its columns to a target schema, validate every row against deterministic rules, and export clean data, with human approval before anything is final. Built on a FastAPI backend, entered in the Meta Global AI Developer Hackathon, and released as v1.0.0. Live demo: [importguard.onrender.com](https://importguard.onrender.com).
 
 ### [Vault API](https://github.com/MugdhoAI/vault-api)
 A FastAPI REST API for storing secrets, built to learn backend security properly. Argon2 password hashing, Fernet encryption at rest, JWT access tokens, and secrets scoped to their owner, with audit events and PostgreSQL integration tests. A learning project, not production ready.
 
 ## Focus
 
-I focus on building reliable software while strengthening my foundations in computer science and working toward AI engineering.
-
-- **Systems and databases:** C, database internals, B trees, storage, and data structures
-- **Search and algorithms:** tokenization, inverted indexes, Boolean queries, and TF-IDF ranking
-- **Backend engineering:** Python, REST APIs, authentication, data validation, and testing
-- **AI and machine learning:** Developing my knowledge through practical work and continued study
-- **Open source:** Fixing concrete issues, writing regression tests, and working with existing codebases
+I build reliable software and study computer science, working toward AI engineering. My ground is systems and databases in C, search and ranking algorithms, and Python backend engineering, and I learn in the open by contributing to real codebases.
 
 ## Open source
 
-I contribute to existing codebases by learning the surrounding implementation, solving concrete issues, adding tests, and responding to maintainer feedback.
+**98 pull requests merged** across open source projects. I contribute by learning the surrounding implementation, solving concrete issues, adding tests, and responding to maintainer feedback. A few examples:
 
 | Contribution | What I worked on |
 | --- | --- |
