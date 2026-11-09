@@ -41,7 +41,7 @@
 </p>
 </p>
 
-## Pinned projects
+## Top projects
 
 ### [SQLite in C](https://github.com/MugdhoAI/sqlite-c)
 A relational database engine built from scratch in C11, inspired by SQLite. Its own file format with 4096 byte pages, a B tree with leaf splits, a SQL parser, and an interactive shell for INSERT and SELECT. Automated tests, a 1,000 row insert benchmark, and CI with AddressSanitizer and UndefinedBehaviorSanitizer. Educational, and not compatible with SQLite database files.
