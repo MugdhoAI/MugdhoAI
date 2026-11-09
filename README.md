@@ -25,6 +25,11 @@
   </tr>
 </table>
 
+<p align="center">
+  <img src="./assets/contribution-city.svg" width="100%" alt="Contribution city: a 3D skyline of my GitHub activity, every building is a day and taller buildings mean more contributions" />
+</p>
+
+
 <h3 align="center">Tech Stack</h3>
 
 <p align="center">
@@ -34,11 +39,6 @@
 
 <p align="center">
   <sub>C · C++ · Python · Databases · Search · AI and ML · Open source</sub>
-</p>
-
-<p align="center">
-  <img src="./assets/contribution-city.svg" width="100%" alt="Contribution city: a 3D skyline of my GitHub activity, every building is a day and taller buildings mean more contributions" />
-</p>
 </p>
 
 ## Top projects
