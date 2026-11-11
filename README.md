@@ -26,7 +26,7 @@
 </table>
 
 <p align="center">
-  <img src="./assets/contribution-city.svg?v=3" width="100%" alt="Contribution city: a 3D skyline of my GitHub activity, every building is a day and taller buildings mean more contributions" />
+  <img src="./assets/contribution-city.svg?v=4" width="100%" alt="Contribution city: a 3D skyline of my GitHub activity, every building is a day and taller buildings mean more contributions" />
 </p>
 
 
