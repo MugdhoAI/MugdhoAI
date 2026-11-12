@@ -70,6 +70,7 @@ I build reliable software and study computer science, working toward AI engineer
 | [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added regression coverage for CLI commands available at the top level exposed in help output |
 | [cubrid-mcp-server #1](https://github.com/MugdhoAI/cubrid-mcp-server/pull/1) · **merged** | Fixed SQL comment handling in audit categorization with regression coverage |
 | [pycubrid #378](https://github.com/cubrid-lab/pycubrid/pull/378) · **merged** | Added strict positive integer validation for Cursor.arraysize across sync and async cursors |
+| [Toolbelt #325](https://github.com/codercops/toolbelt/pull/325) · **merged** | Made the JWT encoder reject payloads that are not objects, completed in the CoderCops Open Source Program |
 
 <p align="center">
   <sub>The contribution city above is drawn from my real GitHub activity and refreshed daily by a generator I built: every building is a day, taller buildings mean more contributions, and quiet days stay parks.</sub>
