@@ -5,12 +5,12 @@
 <ellipse cx="650" cy="220" rx="570" ry="255" fill="url(#amb)"/>
 <circle cx="906" cy="20" r="1.0" fill="#a8d8b0" opacity="0.07"/><circle cx="979" cy="137" r="1.6" fill="#a8d8b0" opacity="0.06"/><circle cx="744" cy="21" r="0.9" fill="#a8d8b0" opacity="0.10"/><circle cx="450" cy="52" r="1.3" fill="#a8d8b0" opacity="0.10"/><circle cx="594" cy="121" r="1.5" fill="#a8d8b0" opacity="0.05"/><circle cx="1030" cy="141" r="1.0" fill="#a8d8b0" opacity="0.07"/><circle cx="1143" cy="76" r="0.8" fill="#a8d8b0" opacity="0.06"/><circle cx="1061" cy="124" r="1.5" fill="#a8d8b0" opacity="0.12"/><circle cx="829" cy="190" r="1.1" fill="#a8d8b0" opacity="0.11"/><circle cx="1048" cy="127" r="1.6" fill="#a8d8b0" opacity="0.11"/><circle cx="955" cy="24" r="0.9" fill="#a8d8b0" opacity="0.08"/><circle cx="489" cy="58" r="0.8" fill="#a8d8b0" opacity="0.08"/><circle cx="904" cy="81" r="1.1" fill="#a8d8b0" opacity="0.07"/><circle cx="629" cy="184" r="1.3" fill="#a8d8b0" opacity="0.11"/><circle cx="557" cy="147" r="0.9" fill="#a8d8b0" opacity="0.09"/><circle cx="1167" cy="131" r="1.3" fill="#a8d8b0" opacity="0.12"/><circle cx="1058" cy="155" r="0.9" fill="#a8d8b0" opacity="0.05"/><circle cx="665" cy="64" r="0.9" fill="#a8d8b0" opacity="0.14"/><circle cx="1083" cy="72" r="1.4" fill="#a8d8b0" opacity="0.09"/><circle cx="1111" cy="98" r="1.0" fill="#a8d8b0" opacity="0.07"/><circle cx="848" cy="63" r="1.3" fill="#a8d8b0" opacity="0.14"/><circle cx="728" cy="55" r="1.7" fill="#a8d8b0" opacity="0.10"/><circle cx="498" cy="24" r="0.8" fill="#a8d8b0" opacity="0.11"/><circle cx="1020" cy="92" r="0.8" fill="#a8d8b0" opacity="0.09"/><circle cx="1172" cy="111" r="1.7" fill="#a8d8b0" opacity="0.14"/><circle cx="439" cy="145" r="1.4" fill="#a8d8b0" opacity="0.10"/><circle cx="629" cy="131" r="0.8" fill="#a8d8b0" opacity="0.09"/><circle cx="768" cy="187" r="1.6" fill="#a8d8b0" opacity="0.08"/><circle cx="803" cy="48" r="1.6" fill="#a8d8b0" opacity="0.14"/><circle cx="652" cy="130" r="1.3" fill="#a8d8b0" opacity="0.07"/><circle cx="998" cy="113" r="1.5" fill="#a8d8b0" opacity="0.10"/><circle cx="430" cy="74" r="0.7" fill="#a8d8b0" opacity="0.14"/><circle cx="1085" cy="165" r="1.0" fill="#a8d8b0" opacity="0.06"/><circle cx="1084" cy="186" r="0.8" fill="#a8d8b0" opacity="0.10"/><circle cx="482" cy="152" r="1.5" fill="#a8d8b0" opacity="0.06"/><circle cx="784" cy="114" r="1.0" fill="#a8d8b0" opacity="0.14"/><circle cx="745" cy="54" r="1.2" fill="#a8d8b0" opacity="0.12"/><circle cx="580" cy="72" r="1.7" fill="#a8d8b0" opacity="0.11"/><circle cx="756" cy="109" r="0.8" fill="#a8d8b0" opacity="0.07"/><circle cx="682" cy="121" r="0.9" fill="#a8d8b0" opacity="0.07"/><circle cx="483" cy="129" r="0.9" fill="#a8d8b0" opacity="0.14"/><circle cx="1070" cy="29" r="0.9" fill="#a8d8b0" opacity="0.12"/><circle cx="590" cy="40" r="1.6" fill="#a8d8b0" opacity="0.11"/><circle cx="782" cy="156" r="1.5" fill="#a8d8b0" opacity="0.07"/><circle cx="502" cy="93" r="1.1" fill="#a8d8b0" opacity="0.10"/><circle cx="973" cy="137" r="1.7" fill="#a8d8b0" opacity="0.06"/><circle cx="730" cy="77" r="1.6" fill="#a8d8b0" opacity="0.07"/><circle cx="572" cy="96" r="1.1" fill="#a8d8b0" opacity="0.08"/><circle cx="616" cy="181" r="1.1" fill="#a8d8b0" opacity="0.14"/><circle cx="840" cy="25" r="1.7" fill="#a8d8b0" opacity="0.13"/><circle cx="1152" cy="182" r="1.5" fill="#a8d8b0" opacity="0.07"/><circle cx="792" cy="54" r="1.1" fill="#a8d8b0" opacity="0.06"/>
 <text x="44" y="54" font-size="13" font-weight="700" letter-spacing="3.5" fill="#3fb950">CONTRIBUTION CITY</text>
-<text x="44" y="106" font-size="47" font-weight="800" fill="#f0f6fc">1,001</text>
+<text x="44" y="106" font-size="47" font-weight="800" fill="#f0f6fc">1,030</text>
 <text x="44" y="132" font-size="14.5" fill="#8fae97">contributions in the last year</text>
-<text x="44" y="164" font-size="14" fill="#c9d1d9"><tspan font-weight="700" fill="#3fb950">67</tspan> active days</text>
+<text x="44" y="164" font-size="14" fill="#c9d1d9"><tspan font-weight="700" fill="#3fb950">68</tspan> active days</text>
 <text x="44" y="188" font-size="14" fill="#8fae97">Busiest day: <tspan font-weight="700" fill="#3fb950">76</tspan> · Nov 4</text>
 <path transform="translate(50 208) scale(0.85)" fill="#e3b341" d="M0-7 L2.1-2.4 7-2.1 3.4 1.3 4.2 6.2 0 3.6 -4.2 6.2 -3.4 1.3 -7-2.1 -2.1-2.4 Z"/>
-<text x="63" y="213" font-size="14" fill="#c9d1d9">62 stars across my projects</text>
+<text x="63" y="213" font-size="14" fill="#c9d1d9">63 stars across my projects</text>
 <polygon points="1008.0,104.0 1030.8,120.6 1022.1,147.4 993.9,147.4 985.2,120.6" fill="none" stroke="#2c5233" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.85"/>
 <polygon points="1008.0,80.0 1053.7,113.2 1036.2,166.8 979.8,166.8 962.3,113.2" fill="none" stroke="#2c5233" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.85"/>
 <polygon points="1008.0,56.0 1076.5,105.8 1050.3,186.2 965.7,186.2 939.5,105.8" fill="none" stroke="#2c5233" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.85"/>
@@ -19,12 +19,12 @@
 <line x1="1008" y1="128" x2="1050.3" y2="186.2" stroke="#22392a" stroke-width="0.8"/>
 <line x1="1008" y1="128" x2="965.7" y2="186.2" stroke="#22392a" stroke-width="0.8"/>
 <line x1="1008" y1="128" x2="939.5" y2="105.8" stroke="#22392a" stroke-width="0.8"/>
-<polygon points="1008.0,57.8 1014.9,125.8 1037.4,168.5 1008.0,128.0 971.7,116.2" fill="#3fb950" fill-opacity="0.25" stroke="#3fb950" stroke-width="1.5"/>
-<circle cx="1008.0" cy="57.8" r="2.2" fill="#7ee787"/>
+<polygon points="1008.0,57.5 1014.9,125.8 1037.4,168.5 1008.0,128.0 971.4,116.1" fill="#3fb950" fill-opacity="0.25" stroke="#3fb950" stroke-width="1.5"/>
+<circle cx="1008.0" cy="57.5" r="2.2" fill="#7ee787"/>
 <circle cx="1014.9" cy="125.8" r="2.2" fill="#7ee787"/>
 <circle cx="1037.4" cy="168.5" r="2.2" fill="#7ee787"/>
 <circle cx="1008.0" cy="128.0" r="2.2" fill="#7ee787"/>
-<circle cx="971.7" cy="116.2" r="2.2" fill="#7ee787"/>
+<circle cx="971.4" cy="116.1" r="2.2" fill="#7ee787"/>
 <text x="1012.0" y="107.0" font-size="8" fill="#55705e">10</text>
 <text x="1012.0" y="83.0" font-size="8" fill="#55705e">100</text>
 <text x="1012.0" y="59.0" font-size="8" fill="#55705e">1K</text>
@@ -352,17 +352,19 @@
 <g transform="translate(907.0 450.5)"><animateTransform attributeName="transform" type="scale" additive="sum" dur="2.80s" fill="freeze" values="1 0;1 0;1 1.03;1 1" keyTimes="0;0.6393;0.9071;1" keySplines="0.33 1.4 0.5 1"/><g transform="translate(-907.0 -450.5)"><g transform="translate(163.3 0) scale(0.82 1)"><polygon points="884.0,356.7 907.0,368.2 907.0,462.0 884.0,450.5" fill="#123c1f"/><polygon points="930.0,356.7 907.0,368.2 907.0,462.0 930.0,450.5" fill="#19552c"/><polygon points="907.0,345.2 930.0,356.7 907.0,368.2 884.0,356.7" fill="#288645"/><rect x="893.5" y="368.7" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="893.5" y="383.7" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="914.5" y="387.5" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="893.5" y="398.7" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="914.5" y="402.5" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="893.5" y="413.7" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="914.5" y="417.5" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="893.5" y="428.7" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="914.5" y="432.5" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/><rect x="914.5" y="447.5" width="4.4" height="6" rx="1" fill="#ffd76a" opacity="0.85"/></g></g></g>
 <polygon points="838.0,450.5 861.0,462.0 838.0,473.5 815.0,462.0" fill="#0e2f17"/>
 <g transform="translate(838.0 462.0)"><animateTransform attributeName="transform" type="scale" additive="sum" dur="2.80s" fill="freeze" values="1 0;1 0;1 1.03;1 1" keyTimes="0;0.6250;0.8929;1" keySplines="0.33 1.4 0.5 1"/><g transform="translate(-838.0 -462.0)"><g transform="translate(150.8 0) scale(0.82 1)"><polygon points="815.0,423.2 838.0,434.7 838.0,473.5 815.0,462.0" fill="#1a572a"/><polygon points="861.0,423.2 838.0,434.7 838.0,473.5 861.0,462.0" fill="#257c3c"/><polygon points="838.0,411.7 861.0,423.2 838.0,434.7 815.0,423.2" fill="#39c25e"/></g></g></g>
+<polygon points="884.0,450.5 907.0,462.0 884.0,473.5 861.0,462.0" fill="#092111"/>
+<g transform="translate(884.0 462.0)"><animateTransform attributeName="transform" type="scale" additive="sum" dur="2.80s" fill="freeze" values="1 0;1 0;1 1.03;1 1" keyTimes="0;0.6446;0.9125;1" keySplines="0.33 1.4 0.5 1"/><g transform="translate(-884.0 -462.0)"><g transform="translate(159.1 0) scale(0.82 1)"><polygon points="861.0,400.0 884.0,411.5 884.0,473.5 861.0,462.0" fill="#123c1f"/><polygon points="907.0,400.0 884.0,411.5 884.0,473.5 907.0,462.0" fill="#19552c"/><polygon points="884.0,388.5 907.0,400.0 884.0,411.5 861.0,400.0" fill="#288645"/><rect x="870.5" y="412.0" width="4.4" height="6" rx="1" fill="#cfe8ff" opacity="0.85"/><rect x="870.5" y="442.0" width="4.4" height="6" rx="1" fill="#cfe8ff" opacity="0.85"/><rect x="891.5" y="445.8" width="4.4" height="6" rx="1" fill="#cfe8ff" opacity="0.85"/><rect x="870.5" y="457.0" width="4.4" height="6" rx="1" fill="#cfe8ff" opacity="0.85"/></g></g></g>
 <circle cx="48" cy="516" r="4" fill="#3572A5"/>
-<text x="58" y="520" font-size="12.5" fill="#9fb3a8">Python 57%</text>
+<text x="58" y="520" font-size="12.5" fill="#9fb3a8">Python 51%</text>
 <circle cx="151.0" cy="516" r="4" fill="#e34c26"/>
-<text x="161.0" y="520" font-size="12.5" fill="#9fb3a8">HTML 23%</text>
-<circle cx="239.4" cy="516" r="4" fill="#563d7c"/>
-<text x="249.4" y="520" font-size="12.5" fill="#9fb3a8">CSS 6%</text>
-<circle cx="313.2" cy="516" r="4" fill="#a8b9cc"/>
-<text x="323.2" y="520" font-size="12.5" fill="#9fb3a8">C 5%</text>
-<circle cx="372.4" cy="516" r="4" fill="#d8b93c"/>
-<text x="382.4" y="520" font-size="12.5" fill="#9fb3a8">JavaScript 5%</text>
-<circle cx="497.29999999999995" cy="516" r="4" fill="#3178c6"/>
-<text x="507.29999999999995" y="520" font-size="12.5" fill="#9fb3a8">TypeScript 4%</text>
-<text x="1156" y="520" font-size="11.5" fill="#5b7263" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">May 31 to Nov 12, 2026 · refreshes daily</text>
+<text x="161.0" y="520" font-size="12.5" fill="#9fb3a8">HTML 21%</text>
+<circle cx="239.4" cy="516" r="4" fill="#3178c6"/>
+<text x="249.4" y="520" font-size="12.5" fill="#9fb3a8">TypeScript 11%</text>
+<circle cx="371.6" cy="516" r="4" fill="#563d7c"/>
+<text x="381.6" y="520" font-size="12.5" fill="#9fb3a8">CSS 8%</text>
+<circle cx="445.40000000000003" cy="516" r="4" fill="#d8b93c"/>
+<text x="455.40000000000003" y="520" font-size="12.5" fill="#9fb3a8">JavaScript 5%</text>
+<circle cx="570.3000000000001" cy="516" r="4" fill="#a8b9cc"/>
+<text x="580.3000000000001" y="520" font-size="12.5" fill="#9fb3a8">C 4%</text>
+<text x="1156" y="520" font-size="11.5" fill="#5b7263" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">May 31 to Nov 13, 2026 · refreshes daily</text>
 </svg>
