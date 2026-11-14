@@ -43,6 +43,9 @@
 
 ## Top projects
 
+### [Virtual Farm 2.0](https://github.com/MugdhoAI/virtual-farm-2.0)
+An agricultural economics simulation project I founded, to help farmers compare crop decisions before committing real resources. I authored its product requirements document. Version 2.0, in development and not deployed, has a Flask API covering six Boro rice season decisions, seeded simulation logic, an early access signup endpoint backed by SQLite, and 63 pytest tests. Version 1.0 live prototype: [virtualfarm.netlify.app](https://virtualfarm.netlify.app).
+
 ### [SQLite in C](https://github.com/MugdhoAI/sqlite-c)
 A relational database engine built from scratch in C11, inspired by SQLite. Its own file format with 4096 byte pages, a B tree with leaf splits, a SQL parser, and an interactive shell for INSERT and SELECT. Automated tests, a 1,000 row insert benchmark, and CI with AddressSanitizer and UndefinedBehaviorSanitizer. Educational, and not compatible with SQLite database files.
 
