@@ -359,7 +359,7 @@
 <circle cx="48" cy="516" r="4" fill="#3572A5"/>
 <text x="58" y="520" font-size="12.5" fill="#9fb3a8">Python 51%</text>
 <circle cx="151.0" cy="516" r="4" fill="#e34c26"/>
-<text x="161.0" y="520" font-size="12.5" fill="#9fb3a8">HTML 21%</text>
+<text x="161.0" y="520" font-size="12.5" fill="#9fb3a8">HTML 20%</text>
 <circle cx="239.4" cy="516" r="4" fill="#3178c6"/>
 <text x="249.4" y="520" font-size="12.5" fill="#9fb3a8">TypeScript 11%</text>
 <circle cx="371.6" cy="516" r="4" fill="#563d7c"/>
@@ -367,6 +367,6 @@
 <circle cx="445.40000000000003" cy="516" r="4" fill="#d8b93c"/>
 <text x="455.40000000000003" y="520" font-size="12.5" fill="#9fb3a8">JavaScript 5%</text>
 <circle cx="570.3000000000001" cy="516" r="4" fill="#a8b9cc"/>
-<text x="580.3000000000001" y="520" font-size="12.5" fill="#9fb3a8">C 4%</text>
+<text x="580.3000000000001" y="520" font-size="12.5" fill="#9fb3a8">C 5%</text>
 <text x="1156" y="520" font-size="11.5" fill="#5b7263" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">May 31 to Nov 14, 2026 · refreshes daily</text>
 </svg>
