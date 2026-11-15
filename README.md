@@ -1,8 +1,8 @@
 <h1 align="center">All Asmaul Husnain · Mugdho</h1>
 
 <p align="center">
-  <strong>Founder &amp; CEO @ Virtual Farm · CS Undergraduate · Learning &amp; Building in AI and Software</strong><br>
-  I founded Virtual Farm, a farm decision simulator, and I am growing it into a startup while I study computer science, learn AI, and contribute to open source.<br>
+  <strong>CS Student · Future AI Engineer · Builder</strong><br>
+  I build practical software, study computer science, and contribute to open source.<br>
   Open to internships and open source collaboration.
 </p>
 
