@@ -60,7 +60,7 @@ A FastAPI REST API for storing secrets, built to learn backend security properly
 
 ## Focus
 
-My focus is Virtual Farm and AI. I am growing Virtual Farm from a working simulator into a startup, and I am learning AI seriously, agentic AI most of all, on the road to becoming an AI engineer. My ground is systems and databases in C, search and ranking algorithms, and Python backend engineering, and I learn in the open by contributing to real codebases.
+My long term goal is to build Virtual Farm into a real company and become an AI engineer who builds systems that hold up beyond controlled environments. I value strong fundamentals, clear thinking, and technical depth, and the discipline to take a project from an idea to something people can actually use. My ground is systems and databases in C, search and ranking algorithms, and Python backend engineering, and I learn in the open by contributing to real codebases.
 
 ## Open source
 
