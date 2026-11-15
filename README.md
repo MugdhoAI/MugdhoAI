@@ -1,8 +1,8 @@
 <h1 align="center">All Asmaul Husnain · Mugdho</h1>
 
 <p align="center">
-  <strong>CS Student · Future AI Engineer · Builder</strong><br>
-  I build practical software, study computer science, and contribute to open source.<br>
+  <strong>Founder &amp; CEO @ Virtual Farm · CS Undergraduate · Learning &amp; Building in AI and Software</strong><br>
+  I founded Virtual Farm, a farm decision simulator, and I am growing it into a startup while I study computer science, learn AI, and contribute to open source.<br>
   Open to internships and open source collaboration.
 </p>
 
@@ -60,7 +60,7 @@ A FastAPI REST API for storing secrets, built to learn backend security properly
 
 ## Focus
 
-I build reliable software and study computer science, working toward AI engineering. My ground is systems and databases in C, search and ranking algorithms, and Python backend engineering, and I learn in the open by contributing to real codebases.
+My focus is Virtual Farm and AI. I am growing Virtual Farm from a working simulator into a startup, and I am learning AI seriously, agentic AI most of all, on the road to becoming an AI engineer. My ground is systems and databases in C, search and ranking algorithms, and Python backend engineering, and I learn in the open by contributing to real codebases.
 
 ## Open source
 
