@@ -64,7 +64,7 @@ My long term goal is to build Virtual Farm into a real company and become an AI 
 
 ## Open source
 
-**128 pull requests merged** across open source projects. I contribute by learning the surrounding implementation, solving concrete issues, adding tests, and responding to maintainer feedback. A few examples:
+**129 pull requests merged** across open source projects. I contribute by learning the surrounding implementation, solving concrete issues, adding tests, and responding to maintainer feedback. A few examples:
 
 | Contribution | What I worked on |
 | --- | --- |
