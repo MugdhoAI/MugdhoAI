@@ -68,6 +68,7 @@ My long term goal is to build Virtual Farm into a real company and become an AI 
 
 | Contribution | What I worked on |
 | --- | --- |
+| [Future AGI #3923](https://github.com/future-agi/future-agi/pull/3923) · **merged** | Guarded the LLM completion paths in the evaluation engine against empty provider responses and added regression tests |
 | [Soup #1243](https://github.com/MakazhanAlpamys/Soup/pull/1243) · **merged** | Fixed Transformers 5 BatchEncoding handling in sequence distillation and added regression coverage |
 | [Soup #1053](https://github.com/MakazhanAlpamys/Soup/pull/1053) · **merged** | Fixed Rich markup handling for model names supplied by users and added regression coverage |
 | [Provena #182](https://github.com/rajfirke/provena/pull/182) · **merged** | Added regression coverage for CLI commands available at the top level exposed in help output |
