@@ -9,13 +9,12 @@ sprout, staggered along the strip, then everything settles. The base
 state is the finished city so static renderers show the same picture.
 
 Languages, stars and forks come from the GitHub GraphQL API. The
-contribution days and the headline total come from the public
-contributions page, so the city matches the public profile graph,
-which counts public contributions only. (The GraphQL calendar,
-queried with the owner's token, also counts private contributions
-and reads higher than the public graph.) If the GraphQL call fails,
-a fallback path scrapes the public contributions page and the
-REST API for everything.
+contribution days and the headline total also come from the
+GraphQL calendar, queried with the owner's token, so they count
+public and private contributions together and match the owner's
+own profile graph. If the GraphQL call fails, a fallback path
+scrapes the public contributions page (public contributions only)
+and the REST API for everything.
 """
 import argparse
 import colorsys
@@ -158,25 +157,16 @@ def model_from(days, total, lang_bytes, stars, forks, radar):
 
 
 def fetch_model(user, token):
+    # The headline and the buildings use the owner's full count: the
+    # GraphQL calendar, queried with the owner's token, counts public
+    # and private contributions together, matching the owner's own
+    # profile graph. (The owner chose the full count on 2026-11-23,
+    # after first trying the public only count the same day.)
     try:
-        model = fetch_graphql(user, token)
+        return fetch_graphql(user, token)
     except Exception as exc:
         print(f"GraphQL path failed ({exc}); using fallback", file=sys.stderr)
         return fetch_fallback(user, token)
-    # The headline and the buildings must match the public profile graph,
-    # which counts public contributions only. The GraphQL calendar,
-    # queried with the owner's token, also counts private contributions
-    # and reads higher than the public graph, so the days and the total
-    # come from the public contributions page instead.
-    try:
-        days = fetch_public_days(user)
-        if days:
-            model["days"] = days
-            model["total"] = sum(days.values())
-    except Exception as exc:
-        print(f"public days failed ({exc}); keeping GraphQL days",
-              file=sys.stderr)
-    return model
 
 
 def shade(hexcolor, factor):
