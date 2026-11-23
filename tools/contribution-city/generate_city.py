@@ -8,13 +8,14 @@ top left corner. On load, buildings grow from their plots and trees
 sprout, staggered along the strip, then everything settles. The base
 state is the finished city so static renderers show the same picture.
 
-Data comes from the GitHub GraphQL API using GITHUB_TOKEN. Set the
-repository secret CITY_TOKEN to a personal access token owned by the
-profile user to make the contribution total match what the owner sees
-on their own profile (including private contributions); when the
-secret is absent the workflow falls back to the built-in token, which
-sees public contributions only. If the GraphQL call fails, a fallback
-path scrapes the public contributions page and the REST API.
+Languages, stars and forks come from the GitHub GraphQL API. The
+contribution days and the headline total come from the public
+contributions page, so the city matches the public profile graph,
+which counts public contributions only. (The GraphQL calendar,
+queried with the owner's token, also counts private contributions
+and reads higher than the public graph.) If the GraphQL call fails,
+a fallback path scrapes the public contributions page and the
+REST API for everything.
 """
 import argparse
 import colorsys
@@ -98,14 +99,19 @@ def fetch_graphql(user, token):
     return model_from(days, total, lang_bytes, stars, forks, radar)
 
 
-def fetch_fallback(user, token):
+def fetch_public_days(user):
+    """Per-day counts from the public contributions page.
+
+    This is the same view the public profile graph shows: public
+    contributions only, no private ones.
+    """
     html = subprocess.run(
         ["curl", "-s", "--fail", "--max-time", "30",
          f"https://github.com/users/{user}/contributions",
          "-H", "User-Agent: contribution-city"],
         capture_output=True, text=True)
     if html.returncode != 0:
-        raise RuntimeError("fallback page fetch failed")
+        raise RuntimeError("public contributions page fetch failed")
     cells = dict(re.findall(
         r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*'
         r'id="(contribution-day-component-[\d-]+)"', html.stdout))
@@ -116,6 +122,11 @@ def fetch_fallback(user, token):
     for dstr, cid in cells.items():
         tip = tips.get(cid, "")
         days[dstr] = int(tip) if tip else 0
+    return days
+
+
+def fetch_fallback(user, token):
+    days = fetch_public_days(user)
     repos = curl_json(
         f"https://api.github.com/users/{user}/repos?per_page=100&type=owner",
         token=token)
@@ -148,10 +159,24 @@ def model_from(days, total, lang_bytes, stars, forks, radar):
 
 def fetch_model(user, token):
     try:
-        return fetch_graphql(user, token)
+        model = fetch_graphql(user, token)
     except Exception as exc:
         print(f"GraphQL path failed ({exc}); using fallback", file=sys.stderr)
         return fetch_fallback(user, token)
+    # The headline and the buildings must match the public profile graph,
+    # which counts public contributions only. The GraphQL calendar,
+    # queried with the owner's token, also counts private contributions
+    # and reads higher than the public graph, so the days and the total
+    # come from the public contributions page instead.
+    try:
+        days = fetch_public_days(user)
+        if days:
+            model["days"] = days
+            model["total"] = sum(days.values())
+    except Exception as exc:
+        print(f"public days failed ({exc}); keeping GraphQL days",
+              file=sys.stderr)
+    return model
 
 
 def shade(hexcolor, factor):
@@ -517,3 +542,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
